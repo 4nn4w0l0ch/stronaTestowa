@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<title>strona testowa</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="layout.css" >
+
+</head>
+<body onload="menu('amor')">
+
+<header>
+  <h2> <img src="Amor_Towles.jpg" alt="Amor Towles" width="1152" height="288"></h2>
+</header>
+
+<section >
+  <nav>
+    <ul>
+      <li onclick="menu('amor')">Amor Towles</li>
+      <li onclick="menu('wychowanie')">Dobre wychowanie</li>
+      <li onclick="menu('dzentelmen')">Dżentelmen w Moskwie</li>
+      <li onclick="menu('lincoln')">Lincoln Highway</li>
+      <li onclick="menu('wywiad')">Wywiad z autorem</li>
+    </ul> 
+  </nav>
+
+<article>
+  <div id="amor" class="main">
+    <h1>Amor Towles</h1>
+    <p> Amor Towles – amerykański pisarz. </p>
+    <p> Jego powieść "Dobre wychowanie", która ukazała się w 2011 r., 
+        została uznana przez The Wall Street Journal za jedną z dziesięciu 
+        najważniejszych książek beletrystycznych wydanych 
+        w 2011 i trafiła na listy bestsellerów.</p>
+    <img src="Towles.jpg" alt="Amor Towles" width="265" height="374">
+   </div>
+
+
+   <div id="wychowanie" class="main">
+    <h1>Dobre wychowanie</h1>
+    <p> „Wspaniała powieść o życiu na Manhattanie w czasach wielkiego kryzysu”.
+        – The Wall Street Journal”</p>
+        <p> „Tętniąca życiem, pełna czułości i błyskotliwych obserwacji historia 
+            młodej sekretarki z Brooklynu, która trafia do towarzystwa modnej młodzieży z wyższych sfer na Manhattanie lat 30”.
+        – The New York Times Book Review</p>
+    <img src="Dobre_wychowanie.jpg" alt="Dobre wychowanie" width="265" height="374">
+    </div>
+
+
+    <div id="dzentelmen" class="main">
+    <h1>Dżentelmen w Moskwie</h1>
+    <p> Dżentelmen w Moskwie to przede wszystkim hołd złożony drugiemu człowiekowi.
+        Powieść uznana została za jedną z najlepszych książek 2016 roku 
+        przez najważniejsze media anglosaskie. Od dnia premiery ciągle znajduje się 
+        na liście bestsellerów „New York Timesa”.</p>   
+    <img src="Dzentelmen_w_Moskwie.jpg" alt="Dżentelmen w Moskwie" width="265" height="374">
+    </div>
+
+    <div id="lincoln" class="main">
+        <h1>Lincoln Highway</h1>
+        <p> „Przepięknie napisana”. – „Washington Post”</p> 
+        <p>„Urzekająca odyseja”. – „People”</p>
+        <p>„Lincoln Highway Amora Towlesa to szalona podróż przez całe Stany, 
+            wypełniona niezapomnianymi postaciami, zapadającymi w pamięć 
+            sceneriami i suspensem. Od tej powieści nie będziecie mogli się 
+            od oderwać”. – „Time”</p>   
+        <img src="Lincoln_Highway.jpg" alt="Lincoln Highway" width="265" height="374">
+        </div>
+
+    <div id="wywiad" class="main">    
+        <h1>Wywiad z autorem</h1>
+        <p> Rozmowa Jeffa Glora (CBS Saturday Morning) z Amorem Towlesem z 
+            22 kwietnia 2022 r.</p>   
+         <iframe width="420" height="315"
+        src="https://www.youtube.com/watch?v=vPg5Q6CV904">
+        </iframe> 
+        Niestety, nie udało się wyświetlić nagrania. 
+    </div>
+</article>
+
+</section>
+
+<footer>
+  <p>Formularz dla odwiedzających stronę</p>
+  <div>
+    <form action="" method="post" target="">
+        <label for="fname">Imię</label>
+        <input type="text" id="fname" name="firstname" placeholder="Podaj imię">
+    
+        <label for="lname">Nazwisko</label>
+        <input type="text" id="lname" name="lastname" placeholder="Podaj nazwisko">
+    
+        <label for="fname">E-mail</label>
+        <input type="text" id="fname" name="firstname" placeholder="Podaj adres email">
+      
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+</footer>
+
+<script>
+ function menu (podstrona) {
+    var main = document.getElementsByClassName("main")
+    for (let m of main){
+        m.style.display = "none"
+}
+    var cit = document.getElementById(podstrona)
+    cit.style.display = "block"
+ }  
+</script>
+
+</body>
+</html>
